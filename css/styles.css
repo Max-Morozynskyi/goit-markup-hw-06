@@ -15,6 +15,7 @@
   --bg-our-job: rgba(47, 48, 58, 0.8);
   --overlay: rgba(0, 0, 0, 0.2);
   --hover-overlay: rgba(33, 150, 243, 0.9);
+  --border-form-clr: rgba(33, 33, 33, 0.2);
   /* others */
   --hover-btn: #188ce8;
   --frame-clr: #ececec;
@@ -235,7 +236,8 @@ img {
 
   color: var(--white-clr);
 }
-.hero-btn {
+.hero-btn,
+.form-btn {
   min-width: 200px;
   padding: 10px 32px;
 
@@ -472,8 +474,8 @@ img {
   transition: transform var(--transition-var);
   transform-origin: top center;
 
-  width: 530px;
-  height: 580px;
+  /* width: 530px;
+  height: 580px; */
   padding: 40px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -516,6 +518,55 @@ img {
   text-align: center;
 
   color: var(--title-color);
+}
+.mod-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  color: var(--title-color);
+}
+.mod-label:last-child {
+  margin-bottom: 20px;
+}
+.mod-text {
+  font-size: 12px;
+  line-height: var(--box-height);
+  letter-spacing: 0.01em;
+
+  color: var(--text-color);
+}
+.input-area {
+  width: 100%;
+  padding: 12px 42px;
+  margin-top: 4px;
+
+  border-radius: 4px;
+  border: 1px solid var(--border-form-clr);
+}
+.input-area.text-area {
+  padding: 12px 16px;
+  min-height: 120px;
+  resize: none;
+}
+.input-area.text-area::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.mod-icon {
+  position: absolute;
+  left: 16px;
+  bottom: 12px;
+}
+.mod-agree {
+  display: block;
+  margin-top: 20px;
+}
+.form-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 
 /* END OF INDEX.HTML */
