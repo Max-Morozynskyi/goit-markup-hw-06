@@ -474,8 +474,8 @@ img {
   transition: transform var(--transition-var);
   transform-origin: top center;
 
-  /* width: 530px;
-  height: 580px; */
+  width: 530px;
+  /* height: 580px; */
   padding: 40px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -497,11 +497,10 @@ img {
 
   color: #000;
   border-radius: 50%;
-  border: 1px solid var(--overlay);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-.btn-close:hover,
-.btn-close:focus {
+.btn-close:hover {
   color: var(--main-clr);
 }
 .recall-form {
@@ -552,6 +551,7 @@ img {
 }
 .input-area.text-area::placeholder {
   color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
 }
 .mod-icon {
   position: absolute;
@@ -559,14 +559,32 @@ img {
   bottom: 12px;
 }
 .mod-agree {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   margin-top: 20px;
+}
+.chbx-label {
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 2px;
+}
+.mod-chbox-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.licence-link {
+  color: var(--main-clr);
 }
 .form-btn {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* END OF INDEX.HTML */
