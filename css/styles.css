@@ -448,29 +448,52 @@ img {
 }
 .subscribe {
   flex-basis: 570px;
-  /* width: 570px; */
   margin-left: auto;
 }
 .subsribe-form {
-  display: block;
+  display: flex;
   margin-top: 20px;
+  align-items: center;
 }
 .subscribe-input {
   padding: 15px 16px;
   background-color: transparent;
+  width: calc(100% - 12px);
+  border: none;
+  outline: none;
+  transition: border-color var(--transition-var);
+  font-size: 16px;
+  color: var(--foot-adress);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.subscribe-input:focus {
+  outline: none;
+  border-color: var(--main-clr);
 }
 .subscribe-label {
   position: relative;
+  flex-grow: 1;
 }
 .subscribe-text {
   position: absolute;
   left: 16px;
-  bottom: 0;
-  transition: transform var(--transition-var);
+  bottom: 15px;
+  font-size: 16px;
+  color: var(--foot-adress);
+  transition: transform var(--transition-var), color var(--transition-var);
+}
+.subscribe-input:focus + .subscribe-text {
+  color: var(--main-clr);
 }
 .subscribe-input:focus + .subscribe-text,
 .subscribe-input:not(:placeholder-shown) + .subscribe-text {
   transform: translateY(45px);
+}
+.icon-send {
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
 /* modal window */
